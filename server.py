@@ -27,7 +27,7 @@ def get_projects():
     except Exception as e:
         return e
     finally:
-        db.closeConnection()
+        db.closeConnection(conn,cursor)
         
 # routes
 @app.get('/')
